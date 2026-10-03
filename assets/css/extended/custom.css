@@ -1,0 +1,10 @@
+/* 自定义样式：让「回到顶部」按钮与白色极简主题协调 */
+.top-link {
+    background: var(--theme);          /* 白底 / 深色模式深底 */
+    border: 1px solid var(--border);   /* 浅灰细边框 */
+    color: var(--content);             /* 正文色 */
+}
+
+.top-link svg {
+    stroke: var(--content);            /* 箭头用正文色，明暗都协调 */
+}

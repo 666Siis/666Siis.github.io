@@ -1,0 +1,14 @@
+# 构建产物（由 GitHub Actions 自动生成，不入库）
+public/
+
+# 主题（由 GitHub Actions 构建时自动拉取，不入库）
+themes/PaperMod/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 本地临时文件
+*.log
+.hugo_build.lock

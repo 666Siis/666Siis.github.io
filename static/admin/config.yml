@@ -1,0 +1,39 @@
+backend:
+  name: github
+  repo: 666Siis/666Siis.github.io
+  branch: main
+  base_url: https://auth.decapcms.org
+  site_domain: 666siis.github.io
+
+# 图片上传位置（Hugo 会把 static 下的文件复制到网站根）
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: posts
+    label: 文章
+    folder: content/posts
+    create: true
+    slug: "{{slug}}"
+    preview_path: "posts/{{slug}}"
+    fields:
+      - { label: 标题, name: title, widget: string }
+      - { label: 正文, name: body, widget: markdown }
+      - { label: 摘要, name: description, widget: string, required: false }
+      - { label: 标签, name: tags, widget: list, required: false }
+
+  - name: pages
+    label: 页面
+    files:
+      - name: downloads
+        label: 下载页
+        file: content/downloads.md
+        fields:
+          - { label: 标题, name: title, widget: string }
+          - { label: 摘要, name: summary, widget: string, required: false }
+          - { label: 正文, name: body, widget: markdown }
+      - name: search
+        label: 搜索页
+        file: content/search.md
+        fields:
+          - { label: 标题, name: title, widget: string }

@@ -1,0 +1,46 @@
+baseURL = 'https://666Siis.github.io/'
+locale = 'zh-HK'
+title = '我的数字自留地'
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# 为搜索功能生成 JSON 索引
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  description = 'Blog · IT 科技资讯 · 个人发癫 · 工具下载'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowToc = true
+  DateFormat = '2006-01-02'
+
+  [params.homeInfoParams]
+    Title = '👋 欢迎来到我的自留地'
+    Content = '这里放我的 Blog、IT 科技资讯、个人发癫，以及我做的 Windows / 本地 LLM 工具下载。'
+
+  [params.profileMode]
+    enabled = false
+
+[[menu.main]]
+  name = '文章'
+  url = '/posts/'
+  weight = 1
+
+[[menu.main]]
+  name = '下载'
+  url = '/downloads/'
+  weight = 2
+
+[[menu.main]]
+  name = '搜索'
+  url = '/search/'
+  weight = 3
